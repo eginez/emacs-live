@@ -219,3 +219,7 @@
     (setq custom-file (concat live-custom-dir "custom-configuration.el")))
 (when (file-exists-p custom-file)
   (load custom-file))
+
+(add-to-list 'load-path "~/.emacs.d/evil") ; only without ELPA/el-get
+(require 'evil)
+(evil-mode 1)
